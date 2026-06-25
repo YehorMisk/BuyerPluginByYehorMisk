@@ -1,0 +1,249 @@
+# BuyerPlugin — после изменений: /buyer reload
+# Цена за 1 шт. Стак (64) = price * 64
+
+messages:
+  prefix: "&8[&aСкупщик&8] "
+  sold: "&aВы продали &e{amount}x {item} &aза &6{price}"
+  no-items: "&cУ вас нет этого предмета в инвентаре!"
+  economy-disabled: "&cЭкономика недоступна. Установите Vault и плагин экономики."
+  reload-success: "&aКонфигурация BuyerPlugin перезагружена."
+  unknown-category: "&cКатегория &e{category} &cне найдена."
+
+gui:
+  main-title: "&8Скупщики"
+  category-title: "&8{category}"
+
+categories:
+  lumberjack:
+    display-name: "&6Лесоруб"
+    icon: OAK_LOG
+    slot: 11
+    items:
+      OAK_LOG:
+        price: 2.5
+        name: "&fДубовое бревно"
+      SPRUCE_LOG:
+        price: 2.5
+        name: "&fЕловое бревно"
+      BIRCH_LOG:
+        price: 2.5
+        name: "&fБерёзовое бревно"
+      JUNGLE_LOG:
+        price: 3.0
+        name: "&fТропическое бревно"
+      DARK_OAK_LOG:
+        price: 3.0
+        name: "&fБревно тёмного дуба"
+      CHERRY_LOG:
+        price: 3.5
+        name: "&fВишнёвое бревно"
+      MANGROVE_LOG:
+        price: 3.0
+        name: "&fМангровое бревно"
+      CRIMSON_STEM:
+        price: 4.0
+        name: "&fБагровый стебель"
+      WARPED_STEM:
+        price: 4.0
+        name: "&fИскажённый стебель"
+      OAK_PLANKS:
+        price: 1.5
+        name: "&fДубовые доски"
+      SPRUCE_PLANKS:
+        price: 1.5
+        name: "&fЕловые доски"
+      BIRCH_PLANKS:
+        price: 1.5
+        name: "&fБерёзовые доски"
+      STICK:
+        price: 0.5
+        name: "&fПалка"
+
+  farmer:
+    display-name: "&aФермер"
+    icon: WHEAT
+    slot: 12
+    items:
+      WHEAT:
+        price: 10.0
+        name: "&fПшеница"
+      CARROT:
+        price: 15.0
+        name: "&fМорковь"
+      POTATO:
+        price: 15.0
+        name: "&fКартофель"
+      BEETROOT:
+        price: 12.0
+        name: "&fСвёкла"
+      SUGAR_CANE:
+        price: 60.0
+        name: "&fТростник"
+      MELON_SLICE:
+        price: 4.0
+        name: "&fЛомтик арбуза"
+      PUMPKIN:
+        price: 20.0
+        name: "&fТыква"
+      COCOA_BEANS:
+        price: 8.0
+        name: "&fКакао-бобы"
+      NETHER_WART:
+        price: 25.0
+        name: "&fАдский нарост"
+      SWEET_BERRIES:
+        price: 6.0
+        name: "&fСладкие ягоды"
+      GLOW_BERRIES:
+        price: 10.0
+        name: "&fСветящиеся ягоды"
+      APPLE:
+        price: 8.0
+        name: "&fЯблоко"
+      HAY_BLOCK:
+        price: 45.0
+        name: "&fСено"
+
+  cultures:
+    display-name: "&2Культуры"
+    icon: TWISTING_VINES
+    slot: 13
+    items:
+      VINE:
+        price: 4.0
+        name: "&fЛоза"
+      TWISTING_VINES:
+        price: 5.0
+        name: "&fЗавитая лоза"
+      WEEPING_VINES:
+        price: 5.0
+        name: "&fПлакучая лоза"
+      GLOW_LICHEN:
+        price: 6.0
+        name: "&fСветящийся лишайник"
+      HANGING_ROOTS:
+        price: 3.0
+        name: "&fСвисающие корни"
+      CACTUS:
+        price: 6.0
+        name: "&fКактус"
+      BAMBOO:
+        price: 3.0
+        name: "&fБамбук"
+      KELP:
+        price: 2.0
+        name: "&fЛаминария"
+      POINTED_DRIPSTONE:
+        price: 8.0
+        name: "&fЗаострённый капельник"
+      DRIPSTONE_BLOCK:
+        price: 5.0
+        name: "&fБлок капельника"
+      MOSS_BLOCK:
+        price: 4.0
+        name: "&fБлок мха"
+      SPORE_BLOSSOM:
+        price: 15.0
+        name: "&fСпороцвет"
+      CRIMSON_ROOTS:
+        price: 3.0
+        name: "&fБагровые корни"
+      WARPED_ROOTS:
+        price: 3.0
+        name: "&fИскажённые корни"
+      NETHER_SPROUTS:
+        price: 2.5
+        name: "&fАдские ростки"
+
+  miner:
+    display-name: "&bШахтёр"
+    icon: IRON_PICKAXE
+    slot: 14
+    items:
+      COAL:
+        price: 5.0
+        name: "&fУголь"
+      RAW_IRON:
+        price: 12.0
+        name: "&fНеобработанное железо"
+      RAW_GOLD:
+        price: 25.0
+        name: "&fНеобработанное золото"
+      RAW_COPPER:
+        price: 4.0
+        name: "&fНеобработанная медь"
+      IRON_INGOT:
+        price: 18.0
+        name: "&fЖелезный слиток"
+      GOLD_INGOT:
+        price: 35.0
+        name: "&fЗолотой слиток"
+      COPPER_INGOT:
+        price: 7.0
+        name: "&fМедный слиток"
+      DIAMOND:
+        price: 150.0
+        name: "&fАлмаз"
+      EMERALD:
+        price: 80.0
+        name: "&fИзумруд"
+      LAPIS_LAZULI:
+        price: 6.0
+        name: "&fЛазурит"
+      REDSTONE:
+        price: 3.0
+        name: "&fРедстоун"
+      QUARTZ:
+        price: 8.0
+        name: "&fКварц"
+      AMETHYST_SHARD:
+        price: 15.0
+        name: "&fОсколок аметиста"
+      ANCIENT_DEBRIS:
+        price: 500.0
+        name: "&fДревние обломки"
+      OBSIDIAN:
+        price: 20.0
+        name: "&fОбсидиан"
+
+  misc:
+    display-name: "&dРазное"
+    icon: CHEST
+    slot: 15
+    items:
+      ROTTEN_FLESH:
+        price: 1.0
+        name: "&fГнилая плоть"
+      BONE:
+        price: 2.0
+        name: "&fКость"
+      STRING:
+        price: 3.0
+        name: "&fНить"
+      SPIDER_EYE:
+        price: 4.0
+        name: "&fПаучий глаз"
+      GUNPOWDER:
+        price: 5.0
+        name: "&fПорох"
+      SLIME_BALL:
+        price: 8.0
+        name: "&fСлизь"
+      BLAZE_ROD:
+        price: 20.0
+        name: "&fОгненный стержень"
+      ENDER_PEARL:
+        price: 35.0
+        name: "&fЖемчуг Края"
+      GHAST_TEAR:
+        price: 45.0
+        name: "&fСлеза гаста"
+      LEATHER:
+        price: 6.0
+        name: "&fКожа"
+      FEATHER:
+        price: 2.0
+        name: "&fПеро"
+      ARROW:
+        price: 2.0
+        name: "&fСтрела"

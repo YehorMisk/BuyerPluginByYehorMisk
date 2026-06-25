@@ -1,0 +1,22 @@
+name: BuyerPlugin
+version: '1.0.0'
+main: com.buyerplugin.BuyerPlugin
+api-version: '1.21'
+authors: [BuyerPlugin]
+description: Configurable item buyer system with Vault integration
+softdepend: [Vault]
+
+commands:
+  buyer:
+    description: Open the buyer menu or a specific category
+    usage: /buyer [category]
+    aliases: [buy, sell, скупщик]
+    permission: buyerplugin.use
+
+permissions:
+  buyerplugin.use:
+    description: Allows using the buyer system
+    default: true
+  buyerplugin.admin:
+    description: Allows reloading the plugin configuration
+    default: op
