@@ -1,7 +1,7 @@
 # BuyerPluginByYehorMisk
 BuyerPlugin is a professional economy plugin for PaperMC. It provides an intuitive GUI for players to sell resources categorized by profession. Features automatic bulk price calculations and seamless Vault integration for instant payouts. Fully customizable via YAML config.
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-uyerPlugin: Advanced Economic Trading System
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BuyerPlugin: Advanced Economic Trading System
 Overview
 BuyerPlugin is a high-performance economic solution for PaperMC (1.21+), designed to simplify resource trading on Minecraft servers. By providing an intuitive, category-based graphical user interface (GUI), it transforms tedious item selling into an engaging and streamlined experience for players.
 
